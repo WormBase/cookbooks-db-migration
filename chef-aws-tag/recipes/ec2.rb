@@ -1,5 +1,5 @@
 
-include_recipe "aws"
+include_recipe "aws-tag"
 
 unless node['aws-tag']['tags'].empty? || node['aws-tag']['tags'].nil?
     aws_resource_tag node['ec2']['instance_id'] do
